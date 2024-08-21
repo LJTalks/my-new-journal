@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Inspire Me Journal - Your Personal Inspirational Journalling App">
+    <meta name="description"
+        content="An intuitive journaling app that combines content idea generation with personal journal entries. Stay inspired and organized with our easy-to-use, mobile-friendly interface.">
+    <meta name="author" content="LJ Talks">
+    <title>Inspire Me Journal</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
+    <!-- Pre load and preconnect to Google Fonts -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        as="style" onload="this.rel='stylesheet'">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap">
+    </noscript>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- Page Header -->
+    <section id="heading">
+        <img src="./assets/images/inspireme-logo.webp" alt="Logo" class="logo" width="40" height="40">
+        <h1>Inspire Me Journal</h1>
+    </section>
+
+    <!-- Change page colour scheme -->
+    <button id="colorToggleBtn">Blue</button>
+
+    <!-- Ideas Generator -->
+    <div id="main">
+        <section id="ideas-generator">
+            <div class="header">
+                <h2>Journaling Ideas Generator</h2>
+            </div>
+            <div class="container">
+                <div class="input-row">
+                    <input type="text" id="keywordInput" placeholder="Enter a keyword or topic">
+                    <button id="generateBtn">Generate Ideas</button>
+                </div>
+                <div id="ideasContainer"></div>
+            </div>
+        </section>
+
+        <!-- My Journal Entry -->
+        <section id="journal-entry">
+            <div class="header">
+                <h2>My Journal Entry</h2>
+            </div>
+            <div class="container entry">
+                <textarea id="journalInput" placeholder="Write your thoughts here..."></textarea>
+                <button id="saveJournalBtn">Save Entry</button>
+            </div>
+        </section>
+
+        <!-- Stored Journal entries -->
+        <section id="saved-entries">
+            <div class="header">
+                <h2>Saved Journal Entries</h2>
+            </div>
+            <div id="entriesContainer" class="container">
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Purchase the hard copy of this journal<a href="https://amzn.to/3AtQ3Wx"> Amazon affiliate link</a></p>
+        <p>&#169 2024 www.ljtalks.com All rights reserved.</p>
+    </div>
+
+    <script src="./assets/js/script.js" defer></script>
+</body>
+
+</html>

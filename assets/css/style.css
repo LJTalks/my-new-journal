@@ -1,0 +1,245 @@
+:root {
+    --main-color: #ff0077;
+    --box-shadow-color: rgba(255, 0, 119, 0.9);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+#heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    position: sticky;
+    top: 0;
+    color: white;
+    background-color: var(--main-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+#main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-grow: 1;
+}
+
+.header {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+::placeholder {
+    font-family: 'Inter', sans-serif;
+    color: #ccc;
+    opacity: 1;
+    font-size: 1rem;
+}
+
+textarea {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    resize: vertical;
+}
+
+.footer {
+    text-align: center;
+    font-size: .8rem;
+    color: #333;
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Apply hover effect to all relevant buttons */
+button:hover,
+#saveJournalBtn:hover,
+#generateBtn:hover,
+.buttons button:hover {
+    font-weight: bold;
+    transform: scale(1:1);
+    box-shadow: 0 0 15px var(--box-shadow-color);
+}
+
+#saveJournalBtn,
+#generateBtn,
+.buttons button {
+    background-color: var(--main-color);
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+/*------Ideas Generator Styles------*/
+
+#ideas-generator .container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#keywordInput {
+    flex: 2;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#generateBtn {
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 100px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+
+#ideasContainer {
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.idea-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.buttons button {
+    margin-right: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/*-----------Journal Styles------*/
+
+#journal-entry .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+}
+
+#journalInput {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    resize: vertical;
+}
+
+#saveJournalBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.entry-item {
+    padding-top: 1.2rem;
+}
+
+.entry-item p {
+    padding-top: 0.5rem;
+    margin-top: 0;
+}
+
+/* Media query for screens >=430px */
+@media screen and (min-width: 430px) {
+
+    #keywordInput {
+        flex-grow: 1;
+        max-width: 80%;
+    }
+}
+
+/* Media query for screens <430px */
+@media screen and (max-width: 429px) {
+    #heading {
+        font-size: 1rem;
+        padding: 8px 0;
+        width: 100%;
+    }
+
+    #generateBtn {
+        max-width: 100px;
+    }
+}
